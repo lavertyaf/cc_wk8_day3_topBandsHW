@@ -13,9 +13,9 @@ public class gigDetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gig_detail);
 
         Intent intent = getIntent();
-        Gig gig = (Gig) intent.getSerializableExtra("gig");
+        Gig gig = (Gig) intent.getSerializableExtra("band");
 
         TextView gigInfoTextView = findViewById(R.id.gigInfoTextViewId);
-        gigInfoTextView.setText(gig.getBandName());
+        gigInfoTextView.setText(gig.getGigLocation().toString());
     }
 }
